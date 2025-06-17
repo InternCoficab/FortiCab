@@ -40,7 +40,7 @@ A web-based application designed to manage and monitor cybersecurity threats wit
 | Frontend   | Angular & JavaScript |
 | UI Modules | React              |
 | Backend    | Node.js |
-| Database   | SQL] |
+| Database   | SQL |
 | Styling    | Tailwind CSS / Bootstrap / Angular Material |
 
 ---
