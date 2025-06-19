@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
-import { Home } from './front/home/home';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { IncidentsComponent } from './components/incidents/incidents.component';
+import { PhishingComponent } from './components/phishing/phishing.component';
+import { VulnerabilitiesComponent } from './components/vulnerabilities/vulnerabilities.component';
 
 export const routes: Routes = [
   {
@@ -10,7 +12,26 @@ export const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    title: 'Dashboard - FortiCab'
   },
-  { path: '**', redirectTo: '' }           // redirect all unknown routes to home
+  {
+    path: 'incidents',
+    component: IncidentsComponent,
+    title: 'Incidents - FortiCab'
+  },
+  {
+    path: 'phishing',
+    component: PhishingComponent,
+    title: 'Phishing - FortiCab'
+  },
+  {
+    path: 'vulnerabilities',
+    component: VulnerabilitiesComponent,
+    title: 'Vulnerabilities - FortiCab'
+  },
+  { 
+    path: '**', 
+    redirectTo: 'dashboard'    // redirect all unknown routes to dashboard
+  }
 ];
