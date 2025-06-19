@@ -35,8 +35,19 @@ export class SidebarComponent {
     }
   ];
 
+  footerMenuItem = {
+    title: 'Logout',
+    icon: 'bi-box-arrow-right',
+    route: '/logout'
+  };
+
   toggleSidebar() {
     this.isCollapsed = !this.isCollapsed;
     document.body.classList.toggle('sidebar-collapsed');
+  }
+
+  logout() {
+    // TODO: Implement actual logout logic here
+    console.log('Logging out...');
   }
 }

@@ -1,8 +1,7 @@
 <!-- Main Sidebar -->
-<aside class="app-sidebar bg-dark" [class.collapsed]="isCollapsed">
-  <!-- Brand Logo -->
-  <a href="/" class="brand-link">
-    <img src="assets/img/forticab.png" class="brand-image img-circle elevation-3" >
+<aside class="app-sidebar bg-dark" [class.collapsed]="isCollapsed"> 
+     <!-- Brand Logo -->  <a href="/" class="brand-link">
+    <img [src]="'./assets/img/forticab.png'" class="brand-image img-circle elevation-3" style="opacity: .8">
     <span class="brand-text fw-light">FortiCab</span>
   </a>
 
@@ -12,13 +11,13 @@
   </button>
 
   <!-- Sidebar -->
-  <div class="sidebar">
+  <div class="sidebar d-flex flex-column">
     <!-- Sidebar Menu -->
-    <nav class="mt-2">
+    <nav class="mt-2 flex-grow-1">
       <ul class="nav nav-pills nav-sidebar flex-column">
         <li class="nav-item" *ngFor="let item of menuItems">
           <a [routerLink]="item.route" 
-             [routerLinkActive]="'inactive'"
+             [routerLinkActive]="'active'"
              class="nav-link"
              [title]="isCollapsed ? item.title : ''">
             <i class="nav-icon bi" [ngClass]="item.icon"></i>
@@ -28,6 +27,25 @@
       </ul>
     </nav>
     <!-- End Sidebar Menu -->
+
+    <!-- Logout Button -->
+    <div class="sidebar-footer">
+      <a href="#" 
+         class="nav-link logout-btn" 
+         (click)="logout(); $event.preventDefault()" 
+         [title]="isCollapsed ? footerMenuItem.title : ''">
+        <i class="nav-icon bi" [ngClass]="footerMenuItem.icon"></i>
+        <span class="nav-text" [class.d-none]="isCollapsed">{{ footerMenuItem.title }}</span>
+      </a>
+    </div>
+
+    <!-- Logout button at the bottom -->
+    <div class="sidebar-bottom">
+      <button class="sidebar-item logout-button" (click)="logout()">
+        <i class="bi bi-box-arrow-right"></i>
+        <span [class.hidden]="isCollapsed">Logout</span>
+      </button>
+    </div>
   </div>
   <!-- End Sidebar -->
 </aside>
