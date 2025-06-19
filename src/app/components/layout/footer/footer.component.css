@@ -1,0 +1,20 @@
+.app-footer {
+  background-color: #fff;
+  border-top: 1px solid #dee2e6;
+  color: #869099;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.app-footer a {
+  color: #869099;
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  color: #6c757d;
+}

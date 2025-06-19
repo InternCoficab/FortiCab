@@ -1,0 +1,43 @@
+.app-content-header {
+  background-color: transparent;
+  padding: 15px 0.5rem;
+  position: relative;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
+.card {
+  box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  padding: 0.75rem 1.25rem;
+}
+
+.card-tools {
+  float: right;
+  margin-right: -0.625rem;
+}
+
+.btn-tool {
+  background-color: transparent;
+  color: #adb5bd;
+  font-size: 0.875rem;
+  margin: -0.75rem 0;
+  padding: 0.25rem 0.5rem;
+}
+
+.direct-chat-messages {
+  height: 250px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.connectedSortable .card-header {
+  cursor: move;
+}

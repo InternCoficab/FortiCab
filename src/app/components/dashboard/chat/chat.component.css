@@ -1,0 +1,96 @@
+.direct-chat {
+  position: relative;
+}
+
+.direct-chat-messages {
+  height: 250px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.direct-chat-msg {
+  margin-bottom: 10px;
+}
+
+.direct-chat-msg.end {
+  margin-right: 50px;
+}
+
+.direct-chat-msg:not(.end) {
+  margin-left: 50px;
+}
+
+.direct-chat-infos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.direct-chat-name {
+  font-weight: 600;
+}
+
+.direct-chat-timestamp {
+  color: #697582;
+  font-size: 0.875rem;
+}
+
+.direct-chat-img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+}
+
+.direct-chat-text {
+  background: #d2d6de;
+  border-radius: 0.25rem;
+  margin: 5px 0 0 50px;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.end .direct-chat-text {
+  background: #007bff;
+  color: #fff;
+  margin-right: 50px;
+}
+
+.direct-chat-contacts {
+  background: #fff;
+  bottom: 0;
+  color: #1f2d3d;
+  height: 250px;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.contacts-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contacts-list-img {
+  border-radius: 50%;
+  float: left;
+  width: 40px;
+}
+
+.contacts-list-info {
+  margin-left: 45px;
+}
+
+.contacts-list-name,
+.contacts-list-msg {
+  display: block;
+}
+
+.contacts-list-msg {
+  color: #697582;
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

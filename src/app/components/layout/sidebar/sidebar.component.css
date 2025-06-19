@@ -1,0 +1,164 @@
+.app-sidebar {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 250px;
+  z-index: 1040;
+  transition: all 0.3s ease;
+}
+
+.app-sidebar.collapsed {
+  width: 4.6rem;
+}
+
+.brand-link {
+  border-bottom: 1px solid #4b545c;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding: 0.8125rem 0.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.brand-link:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.brand-image {
+  float: left;
+  line-height: .8;
+  margin-left: .8rem;
+  margin-right: .5rem;
+  margin-top: -3px;
+  max-height: 33px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.brand-link:hover .brand-image {
+  transform: scale(1.05);
+}
+
+.collapsed .brand-text {
+  display: none;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  z-index: 1050;
+  transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-sidebar {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.nav-sidebar .nav-link {
+  color: #c2c7d0;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 0.375rem;
+  margin: 0.2rem 0.5rem;
+}
+
+.nav-sidebar .nav-link:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.nav-sidebar .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.nav-sidebar .nav-link.active:hover {
+  background-color: #0056b3;
+  transform: translateX(5px) scale(1.02);
+}
+
+.nav-icon {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  width: 1.6rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.2);
+}
+
+.collapsed .nav-text {
+  display: none;
+}
+
+.collapsed .nav-link {
+  padding: 0.75rem 0;
+  justify-content: center;
+  margin: 0.2rem auto;
+  width: 3rem;
+}
+
+.collapsed .nav-icon {
+  margin-right: 0;
+}
+
+.collapsed .nav-link:hover {
+  transform: scale(1.1);
+}
+
+/* Tooltip enhancement for collapsed state */
+.collapsed .nav-link {
+  position: relative;
+}
+
+.collapsed .nav-link:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  margin-left: 1rem;
+  z-index: 1060;
+}
+
+/* Main content adjustment when sidebar is collapsed */
+:host-context(body.sidebar-collapsed) .app-main {
+  margin-left: 4.6rem;
+}

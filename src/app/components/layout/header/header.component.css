@@ -1,0 +1,42 @@
+.app-header {
+  background-color: #fff;
+  border-bottom: 1px solid #dee2e6;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar-badge {
+  font-size: .6rem;
+  font-weight: 300;
+  padding: 2px 4px;
+  position: absolute;
+  right: 5px;
+  top: 9px;
+}
+
+.dropdown-menu-lg {
+  max-width: 300px;
+  min-width: 280px;
+  padding: 0;
+}
+
+.dropdown-item-title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.img-size-50 {
+  width: 50px;
+  height: 50px;
+}
+
+.dropdown-footer,
+.dropdown-header {
+  display: block;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}

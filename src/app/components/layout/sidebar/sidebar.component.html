@@ -1,0 +1,33 @@
+<!-- Main Sidebar -->
+<aside class="app-sidebar bg-dark" [class.collapsed]="isCollapsed">
+  <!-- Brand Logo -->
+  <a href="/" class="brand-link">
+    <img src="assets/img/forticab.png" class="brand-image img-circle elevation-3" >
+    <span class="brand-text fw-light">FortiCab</span>
+  </a>
+
+  <!-- Toggle Button -->
+  <button class="sidebar-toggle btn btn-link text-light" (click)="toggleSidebar()">
+    <i class="bi" [ngClass]="isCollapsed ? 'bi-chevron-right' : 'bi-chevron-left'"></i>
+  </button>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column">
+        <li class="nav-item" *ngFor="let item of menuItems">
+          <a [routerLink]="item.route" 
+             [routerLinkActive]="'inactive'"
+             class="nav-link"
+             [title]="isCollapsed ? item.title : ''">
+            <i class="nav-icon bi" [ngClass]="item.icon"></i>
+            <span class="nav-text" [class.d-none]="isCollapsed">{{ item.title }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- End Sidebar Menu -->
+  </div>
+  <!-- End Sidebar -->
+</aside>

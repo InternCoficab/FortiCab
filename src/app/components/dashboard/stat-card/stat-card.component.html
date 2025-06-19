@@ -1,0 +1,13 @@
+<!-- Small Box Widget -->
+<div class="small-box" [ngClass]="colorClass">
+  <div class="inner">
+    <h3>{{ value }}<sup *ngIf="suffix" class="fs-5">{{ suffix }}</sup></h3>
+    <p>{{ title }}</p>
+  </div>
+  <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path [attr.d]="icon"></path>
+  </svg>
+  <a href="#" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
+    More info <i class="bi bi-link-45deg"></i>
+  </a>
+</div>
