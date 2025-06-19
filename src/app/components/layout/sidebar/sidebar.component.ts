@@ -19,19 +19,19 @@ export class SidebarComponent {
       active: true
     },
     {
-      title: 'Users',
-      icon: 'bi-people',
-      route: '/users'
+      title: 'Incidents',
+      icon: 'bi-shield-exclamation',
+      route: '/incidents'
     },
     {
-      title: 'Reports',
-      icon: 'bi-file-earmark-text',
-      route: '/reports'
+      title: 'Phishing',
+      icon: 'bi-envelope-exclamation',
+      route: '/phishing'
     },
     {
-      title: 'Settings',
-      icon: 'bi-gear',
-      route: '/settings'
+      title: 'Vulnerabilities',
+      icon: 'bi-bug-fill',
+      route: '/vulnerabilities'
     }
   ];
 
