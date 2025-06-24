@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+// Make sure the path and export are correct; adjust as needed:
 import { Register } from './register';
+// or, if the file is named 'register.ts' and exports Register:
+ // import { Register } from './register';
 
 describe('Register', () => {
   let component: Register;

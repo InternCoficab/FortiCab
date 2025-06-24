@@ -4,34 +4,31 @@ import { IncidentsComponent } from './incidents/incidents.component';
 import { PhishingComponent } from './phishing/phishing.component';
 import { VulnerabilitiesComponent } from './vulnerability/vulneravility.component';
 
+
+import { BlankLayoutComponent } from './shared/layouts/blank-layout/blank-layout';
+import { MainLayoutComponent } from './shared/layouts/main-layout/main-layout.component';
+
 export const routes: Routes = [
   {
+    path: 'register',
+    component: BlankLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./auth/pages/register/register').then(m => m.Register)
+      }
+    ]
+  },
+  {
     path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full'
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-    title: 'Dashboard - FortiCab'
-  },
-  {
-    path: 'incidents',
-    component: IncidentsComponent,
-    title: 'Incidents - FortiCab'
-  },
-  {
-    path: 'phishing',
-    component: PhishingComponent,
-    title: 'Phishing - FortiCab'
-  },
-  {
-    path: 'vulnerabilities',
-    component: VulnerabilitiesComponent,
-    title: 'Vulnerabilities - FortiCab'
-  },
-  { 
-    path: '**', 
-    redirectTo: 'dashboard'    // redirect all unknown routes to dashboard
+    component: MainLayoutComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashboardComponent, title: 'Dashboard - FortiCab' },
+      { path: 'incidents', component: IncidentsComponent, title: 'Incidents - FortiCab' },
+      { path: 'phishing', component: PhishingComponent, title: 'Phishing - FortiCab' },
+      { path: 'vulnerabilities', component: VulnerabilitiesComponent, title: 'Vulnerabilities - FortiCab' },
+      { path: '**', redirectTo: 'dashboard' }
+    ]
   }
 ];

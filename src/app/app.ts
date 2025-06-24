@@ -1,5 +1,6 @@
+
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router } from '@angular/router';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { SidebarComponent } from './components/layout/sidebar/sidebar.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
@@ -13,4 +14,10 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 })
 export class App {
   title = 'FortiCab';
+  constructor(public router: Router) {}
+
+  isBlankLayout(): boolean {
+    // Add all blank-layout routes here
+    return this.router.url.startsWith('/register');
+  }
 }

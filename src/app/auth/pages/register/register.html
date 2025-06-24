@@ -1,1 +1,61 @@
-<p>register works!</p>
+<!-- Register Page Template -->
+<div class="register-box">
+  <div class="register-logo">
+    <a href="#"><b>Forti</b>Cab</a>
+  </div>
+  <div class="card">
+    <div class="card-body register-card-body">
+      <p class="register-box-msg">Register a New Membership</p>
+      <form>
+        <div class="mb-4 text-center">
+          <label class="mb-2 fw-bold fs-5">Select Role</label>
+          <div class="btn-group w-100 shadow-sm" role="group" aria-label="Role selection">
+            <input type="radio" class="btn-check" name="role" id="role-analyst" autocomplete="off" checked>
+            <label class="btn btn-outline-primary d-flex align-items-center justify-content-center py-2" for="role-analyst">
+              <i class="bi bi-person-badge me-2"></i> Analyst
+            </label>
+            <input type="radio" class="btn-check" name="role" id="role-admin" autocomplete="off">
+            <label class="btn btn-outline-primary d-flex align-items-center justify-content-center py-2" for="role-admin">
+              <i class="bi bi-shield-lock me-2"></i> Admin
+            </label>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Full Name" />
+          <div class="input-group-text"><span class="bi bi-person"></span></div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Email" />
+          <div class="input-group-text"><span class="bi bi-envelope"></span></div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Password" />
+          <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+              <label class="form-check-label" for="flexCheckDefault">
+                I agree to the <a href="#">terms</a>
+              </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">Sign In</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="social-auth-links text-center mb-3 d-grid gap-2">
+        <p>- OR -</p>
+        
+        <a href="#" class="btn btn-danger">
+          <i class="bi bi-google me-2"></i> Sign in using Google+
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</div>
