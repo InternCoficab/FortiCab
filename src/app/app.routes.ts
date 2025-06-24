@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { IncidentsComponent } from './components/incidents/incidents.component';
-import { PhishingComponent } from './components/phishing/phishing.component';
-import { VulnerabilitiesComponent } from './components/vulnerabilities/vulnerabilities.component';
+import { IncidentsComponent } from './incidents/incidents.component';
+import { PhishingComponent } from './phishing/phishing.component';
+import { VulnerabilitiesComponent } from './vulnerability/vulneravility.component';
 
 export const routes: Routes = [
   {
