@@ -5,6 +5,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'login',
+    loadComponent: () => import('../shared/layouts/blank-layout/blank-layout.component').then(m => m.BlankLayoutComponent),
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./pages/login/login').then(m => m.Login)
+      }
+    ]
+  },
+  {
     path: 'register',
     loadComponent: () => import('../shared/layouts/blank-layout/blank-layout.component').then(m => m.BlankLayoutComponent),
     children: [

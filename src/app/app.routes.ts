@@ -10,6 +10,16 @@ import { MainLayoutComponent } from './shared/layouts/main-layout/main-layout.co
 
 export const routes: Routes = [
   {
+    path: 'login',
+    component: BlankLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./auth/pages/login/login').then(m => m.Login)
+      }
+    ]
+  },
+  {
     path: 'register',
     component: BlankLayoutComponent,
     children: [
