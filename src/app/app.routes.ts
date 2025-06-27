@@ -4,6 +4,10 @@ import { IncidentsComponent } from './incidents/incidents.component';
 import { PhishingComponent } from './phishing/phishing.component';
 import { VulnerabilitiesComponent } from './vulnerability/vulneravility.component';
 
+import { UserListComponent } from './user/pages/user-list/user-list';
+import { CreateUserComponent } from './user/pages/create-user/create-user';
+import { EditUserComponent } from './user/pages/edit-user/edit-user';
+
 
 import { BlankLayoutComponent } from './shared/layouts/blank-layout/blank-layout';
 import { MainLayoutComponent } from './shared/layouts/main-layout/main-layout.component';
@@ -38,6 +42,14 @@ export const routes: Routes = [
       { path: 'incidents', component: IncidentsComponent, title: 'Incidents - FortiCab' },
       { path: 'phishing', component: PhishingComponent, title: 'Phishing - FortiCab' },
       { path: 'vulnerabilities', component: VulnerabilitiesComponent, title: 'Vulnerabilities - FortiCab' },
+      {
+        path: 'users',
+        children: [
+          { path: '', component: UserListComponent },
+          { path: 'create', component: CreateUserComponent },
+          { path: 'edit/:id', component: EditUserComponent },
+        ]
+      },
       { path: '**', redirectTo: 'dashboard' }
     ]
   }
